@@ -1,9 +1,31 @@
-# 🕹️ Gaming Tool Preferences — Tool Description Optimization & Evaluation Pipeline
+# 🕹️ Gaming Tool Preferences — Description Optimization in Tool-Calling LLMs
 
-This repository builds on the BFCL framework to support research on **description optimization**, **function generation**, and **evaluation** for large language models in structured tasks.
+This repository contains code and data for our investigation into the role of natural language descriptions in shaping tool usage behavior by large language models within tool-calling systems (e.g., MCP, OpenAI function calling). It extends the [BFCL framework](https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard) with:
 
-The original BFCL leaderboard code can be
-found [here](https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard).
+- New **description optimization** modes
+- A complete **modification + generation + evaluation pipeline**
+
+[//]: # (- Support for both **local and API-based models**)
+
+[//]: # (📄 This is the official implementation for our paper:)
+
+[//]: # ()
+[//]: # (> **"Gaming Tool Preferences: Exposing Description-Induced Biases in Tool-Calling LLMs"**  )
+
+[//]: # (> *[Authors Redacted]*  )
+
+[//]: # (> [arXiv link coming soon])
+
+---
+
+## 🧠 Motivation
+
+Tool selection in LLMs is surprisingly fragile. Simply tweaking a function’s natural language description—without changing what the tool does—can cause massive changes in usage.
+
+This repo lets you **experiment with and evaluate** such description changes. In our paper, we show:
+- Some edits increase tool usage by **10× or more**.
+- Certain cues (assertiveness, examples, name-dropping) strongly bias usage.
+- Combined edits consistently beat every single strategy across 10 models.
 
 ---
 
