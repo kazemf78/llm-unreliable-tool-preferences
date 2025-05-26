@@ -21,7 +21,7 @@ SKIP_EXISTING=false
 USE_LOCAL_MODEL=false
 model="gpt-4.1-2025-04-14-FC"
 #model="o4-mini-2025-04-16-FC"
-#model="meta-llama/Llama-3.1-70B-Instruct"
+#model="meta-llama/Llama-3.1-8B-Instruct"
 #model="Qwen/Qwen2.5-7B-Instruct-FC"
 
 usage() {
@@ -161,6 +161,10 @@ for mode in "${modes[@]}"; do
               CMD+=(--num-threads 20)
             fi
 
+            if [[ "$model" == o4-mini* || "$model" == o1* || "$model" == o3-mini* ]]; then
+              CMD+=(--temperature 1)
+            fi
+
             "${CMD[@]}"
             echo "Generation completed for $category"
           fi
@@ -193,7 +197,7 @@ for mode in "${modes[@]}"; do
             CMD+=(--num-threads 20)
           fi
 
-          if [[ "$model" == "o4-mini"* || "$model" == "o1"* || "$model" == "o3-mini"* ]]; then
+          if [[ "$model" == o4-mini* || "$model" == o1* || "$model" == o3-mini* ]]; then
             CMD+=(--temperature 1)
           fi
 
