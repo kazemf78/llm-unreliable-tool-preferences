@@ -1,22 +1,18 @@
-# 🕹️ Gaming Tool Preferences — Description Optimization in Tool-Calling LLMs
+# Gaming Tool Preferences in Agentic LLMs  
+#### _Exposing Description-Induced Biases in Tool-Calling LLMs_
 
-This repository contains code and data for our investigation into the role of natural language descriptions in shaping tool usage behavior by large language models within tool-calling systems (e.g., MCP, OpenAI function calling). It extends the [BFCL framework](https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard) with:
-
-- New **description optimization** modes
-- A complete **modification + generation + evaluation pipeline**
-
-[//]: # (- Support for both **local and API-based models**)
-
-[//]: # (📄 This is the official implementation for our paper:)
-
-[//]: # ()
-[//]: # (> **"Gaming Tool Preferences: Exposing Description-Induced Biases in Tool-Calling LLMs"**  )
-
-[//]: # (> *[Authors Redacted]*  )
-
-[//]: # (> [arXiv link coming soon])
+📄 This is the **official implementation** of the paper:  
+**Gaming Tool Preferences in Agentic LLMs**  
+_Kazem Faghih, Wenxiao Wang, Yize Cheng, Siddhant Bharti, Gaurang Sriramanan, Sriram Balasubramanian, Parsa Hosseini, Soheil Feizi_  
+📚 [arXiv:2505.18135](https://arxiv.org/abs/2505.18135)
 
 ---
+
+This repository contains the code and data for our study on how natural language descriptions can bias tool selection behavior in large language models (LLMs) under tool-calling protocols (e.g., MCP, OpenAI function calling). It extends the [BFCL framework](https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard) with:
+
+- New **description optimization** modes  
+- A complete **modification + generation + evaluation pipeline**
+
 
 ## 🧠 Motivation
 
@@ -123,8 +119,7 @@ Automatically appends:
   --model o4-mini-2025-04-16-FC
 ```
 
-If the model name starts with `o1`, `o3-mini`, or `o4-mini` (if it is a reasoning model from openAI), the script will *
-*append `--temperature 1`**.
+If the model name starts with `o1`, `o3-mini`, or `o4-mini` (if it is a reasoning model from openAI), the script will **append `--temperature 1`**.
 
 ---
 
@@ -195,3 +190,17 @@ You can run the script from either the **project root** or the `scripts/` folder
   ```
   Please **do not remove others’ entries**.
 
+## 📌 Citation
+
+If you find this work useful, please cite us:
+
+```bibtex
+@misc{faghih2025gamingtoolpreferencesagentic,
+  title={Gaming Tool Preferences in Agentic LLMs}, 
+  author={Kazem Faghih and Wenxiao Wang and Yize Cheng and Siddhant Bharti and Gaurang Sriramanan and Sriram Balasubramanian and Parsa Hosseini and Soheil Feizi},
+  year={2025},
+  eprint={2505.18135},
+  primaryClass={cs.AI},
+  url={https://arxiv.org/abs/2505.18135}
+}
+```
