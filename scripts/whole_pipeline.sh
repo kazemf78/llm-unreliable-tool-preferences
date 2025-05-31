@@ -12,7 +12,10 @@ LOG_FILE="$LOG_DIR/run_${timestamp}.log"
 
 exec > >(tee -a "$LOG_FILE") 2>&1
 
-
+#########################################
+### Configuration Section
+### Modify these variables as needed
+#########################################
 # Default: everything is OFF
 ENABLE_GENERATION=false
 ENABLE_EVALUATION=false
@@ -23,6 +26,12 @@ model="gpt-4.1-2025-04-14-FC"
 #model="o4-mini-2025-04-16-FC"
 #model="meta-llama/Llama-3.1-8B-Instruct"
 #model="Qwen/Qwen2.5-7B-Instruct-FC"
+
+num_thread=20
+
+#########################################
+### End of Configuration Section
+#########################################
 
 usage() {
   echo "Usage: $0 [--enable-generation] [--enable-evaluation] [--enable-modification] [--skip-existing]"
@@ -158,7 +167,7 @@ for mode in "${modes[@]}"; do
             if $USE_LOCAL_MODEL; then
               CMD+=(--backend vllm --num-gpus 1 --gpu-memory-utilization 0.9)
             else
-              CMD+=(--num-threads 20)
+              CMD+=(--num-threads $num_thread)
             fi
 
             if [[ "$model" == o4-mini* || "$model" == o1* || "$model" == o3-mini* ]]; then
@@ -194,7 +203,7 @@ for mode in "${modes[@]}"; do
           if $USE_LOCAL_MODEL; then
             CMD+=(--backend vllm --num-gpus 1 --gpu-memory-utilization 0.9)
           else
-            CMD+=(--num-threads 20)
+            CMD+=(--num-threads $num_thread)
           fi
 
           if [[ "$model" == o4-mini* || "$model" == o1* || "$model" == o3-mini* ]]; then
