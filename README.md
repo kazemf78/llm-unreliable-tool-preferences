@@ -85,7 +85,7 @@ All tasks (modification, generation, evaluation) are handled by:
 
 ## 🔍 Example Usage
 
-### Full pipeline using default API model
+### Full pipeline using default API model (gpt-4.1-2025-04-14-FC)
 
 ```bash
 ./scripts/whole_pipeline.sh \
