@@ -8,7 +8,7 @@ _Kazem Faghih, Wenxiao Wang, Yize Cheng, Siddhant Bharti, Gaurang Sriramanan, Sr
 
 ---
 
-This repository contains the code and data for our study on how natural language descriptions can bias tool selection behavior in large language models (LLMs) under tool-calling protocols (e.g., MCP, OpenAI function calling). It extends the [BFCL framework](https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard) with:
+This repository contains the code and data for our study on how natural language descriptions can bias tool selection behavior in large language models (LLMs) under tool-calling protocols (e.g., MCP, OpenAI function calling). It extends [BFCL](https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard) with:
 
 - New **description optimization** modes  
 - A complete **modification + generation + evaluation pipeline**
