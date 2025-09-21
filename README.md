@@ -1,9 +1,9 @@
-# Gaming Tool Preferences in Agentic LLMs  
+# Tool Preferences in Agentic LLMs are Unreliable  
 #### _Exposing Description-Induced Biases in Tool-Calling LLMs_
 
-📄 This is the **official implementation** of the paper:  
-**Gaming Tool Preferences in Agentic LLMs**  
-_Kazem Faghih, Wenxiao Wang, Yize Cheng, Siddhant Bharti, Gaurang Sriramanan, Sriram Balasubramanian, Parsa Hosseini, Soheil Feizi_  
+📄 This is the official implementation of the EMNLP2025 (main) paper:  
+**Tool Preferences in Agentic LLMs are Unreliable**  
+_Kazem Faghih*, Wenxiao Wang*, Yize Cheng*, Siddhant Bharti, Gaurang Sriramanan, Sriram Balasubramanian, Parsa Hosseini, Soheil Feizi_  
 📚 [arXiv:2505.18135](https://arxiv.org/abs/2505.18135)
 
 ---
